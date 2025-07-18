@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kabbala - Tienda de Ropa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #2a2a2a;
+      color: #f5f5f5;
+    }
+
+    header {
+      background-color: #2a2a2a;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #800000;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f5f5f5;
+    }
+
+    nav a {
+      margin-left: 30px;
+      color: #cccccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff4d4d;
+    }
+
+    .hero {
+      position: relative;
+      padding: 140px 40px;
+      background: url('https://www.instalacionesanfra.com/wp-content/uploads/2016/01/tienda-de-ropa-1.jpg') center/cover no-repeat;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 10, 10, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    .productos {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      background-color: #202020;
+    }
+
+    .producto {
+      background-color: #2e2e2e;
+      border: 1px solid #4a0000;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .producto:hover {
+      transform: scale(1.03);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .producto h3 {
+      margin: 10px 0 5px;
+      font-family: 'Inter', sans-serif;
+      color: #ff4d4d;
+    }
+
+    .producto p {
+      font-size: 0.9rem;
+      color: #bbbbbb;
+    }
+
+
+    footer {
+      background-color: #2a2a2a;
+      color: #888;
+      text-align: center;
+      padding: 20px 0;
+      border-top: 2px solid #800000;
+    }
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  padding: 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Burbuja al hacer hover */
+.whatsapp::after {
+  content: 'Escribinos por WhatsApp';
+  position: absolute;
+  right: 70px;
+  background-color: #333;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.whatsapp:hover::after {
+  opacity: 1;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Kabbala</div>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#sobre">Sobre Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Moda urbana con estilo propio</h1>
+      <p>Vení a descubrir lo mejor en indumentaria, calidad y actitud</p>
+    </div>
+  </section>
+
+  <section class="productos" id="productos">
+    <div class="producto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Ptm0bkVxImQXKVVCgwkvVBr3d5foFcgJDje-VHYIBw-URW-xiCB0H494TSrglj7jAsY&usqp=CAU" alt="Remera Oversize">
+      <h3>Remera Oversize</h3>
+      <p>$5.500</p>
+    </div>
+    <div class="producto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVl6YWuX6y9QUyITYXKfrogqYUOvccCyw9pswIWGsCNw84c73sRKs9j6oqp_PNE76BP1k&usqp=CAU" alt="Jean Slim">
+      <h3>Jean Slim Azul</h3>
+      <p>$8.900</p>
+    </div>
+    <div class="producto">
+      <img src="https://cipitria.com.ar/cdn/shop/files/buzo_opalo_501-2560-_1.jpg?v=1741787506&width=1024" alt="Buzo Crop">
+      <h3>Buzo Crop Negro</h3>
+      <p>$7.200</p>
+    </div>
+    <div class="producto">
+      <img src="data:image/jpeg;base64,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" alt="Camisa Lino">
+      <h3>Camisa Lino Blanca</h3>
+      <p>$6.800</p>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <p>&copy; 2025 Kabbala. Todos los derechos reservados.</p>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/549XXXXXXXXXX" target="_blank" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 448 512" fill="white">
+    <path d="M380.9 97.1C339-11.2 203.9-34.5 111.6 30.9 59.5 69.3 29.2 130.3 32.1 196.5c2.1 49.4 18.9 97.2 49.2 135.4L32 480l152.1-48.9c37.2 18.2 78.7 27.7 120.1 27.7 132.3 0 240-107.7 240-240 0-47.3-13.9-93.5-39.4-132.6zm-148.1 314c-34.3 0-68.3-9.1-98-26.4l-7-4.1-90.3 29 29.9-87.5-4.5-7.3c-23.5-38.1-35.9-82.3-35.9-127.3 0-131.6 124.6-219.1 243.8-172.6 96.2 37.4 153.1 144.2 124.6 243.5-21.9 77.7-92.2 132.7-171.8 132.7zm84.2-138.5c-4.6-2.3-27.2-13.4-31.5-14.9-4.2-1.6-7.3-2.3-10.4 2.3s-11.9 14.9-14.6 18c-2.7 3.1-5.4 3.5-10 1.2-27.2-13.6-44.9-24.3-62.6-55.2-4.7-8.1 4.7-7.5 13.6-25.1 1.5-3.1.8-5.8-.4-8.1-1.2-2.3-10.4-25.1-14.3-34.5-3.7-8.9-7.5-7.7-10.4-7.8-2.7-.1-5.8-.1-8.9-.1s-8.1 1.2-12.3 5.8-16.1 15.7-16.1 38.3 16.5 44.4 18.8 47.4c2.3 3.1 32.6 49.9 79 70 11.1 4.8 19.8 7.7 26.6 9.9 11.2 3.6 21.4 3.1 29.5 1.9 9-1.3 27.2-11.1 31-21.8 3.8-10.6 3.8-19.7 2.7-21.6-1.2-1.8-4.3-2.9-8.9-5.2z"/>
+  </svg>
+</a>
+  
+</body>
+</html>
